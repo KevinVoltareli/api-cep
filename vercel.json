@@ -1,10 +1,5 @@
 {
   "build": {
-    "functions": {
-      "api/**/*.ts": {
-        "runtime": "nodejs14.x"
-      }
-    },
     "command": "npx prisma generate"
   },
   "version": 2,
