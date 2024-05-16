@@ -13,9 +13,10 @@ export class FindAddressByCEPController {
 
     try {
       const result = await useCase.execute(request.body);
+      console.log(result);
       return response.json(result);
-    } catch (err) {
-      return response.status(500).json({ error: err });
+    } catch (err: any) {
+      return response.status(500).json({ error: err.message });
     }
   }
 }

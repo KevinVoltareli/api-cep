@@ -23,6 +23,11 @@ export class FindAddressByCEPUseCase {
 
   async execute(data: CEP) {
     try {
+      const verifyCep = data.cep;
+
+      if (verifyCep.length !== 8) {
+        throw new Error("CEP inválido. O CEP deve ter 8 caracteres.");
+      }
       const address = await correios.consultaCEP({ cep: data.cep });
 
       if (address.erro) return;
