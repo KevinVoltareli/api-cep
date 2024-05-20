@@ -39,7 +39,10 @@ export class FindAddressByCEPUseCase {
         },
       });
 
-      if (!existingCEP) {
+      if (existingCEP) {
+        console.log("retornou do banco de dados");
+        return existingCEP;
+      } else {
         // Buscar na API dos Correios
         const address = await correios.consultaCEP({ cep: data.cep });
 
@@ -59,7 +62,7 @@ export class FindAddressByCEPUseCase {
           },
         });
       }
-
+      console.log("retorno da api");
       return existingCEP;
     } catch (error) {
       throw new Error("Erro ao buscar ou salvar o CEP: " + error);

@@ -1,10 +1,6 @@
 import { Request, Response } from "express";
 import { FindAddressByCEPUseCase } from "./search-cep.usecase";
 
-let Correios = require("node-correios");
-
-let correios = new Correios();
-
 export class FindAddressByCEPController {
   constructor() {}
 
