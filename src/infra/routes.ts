@@ -1,10 +1,6 @@
 import { Router } from "express";
 import { FindAddressByCEPController } from "../modules/search-cep.controller";
 
-let Correios = require("node-correios");
-
-let correios = new Correios();
-
 const controller = new FindAddressByCEPController();
 
 const router = Router();
