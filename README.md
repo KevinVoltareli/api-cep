@@ -15,5 +15,5 @@ Instalação
 
 ## A Api estará disponível "http://localhost:3001"
 ## Endpoints Disponíveis
-GET /endereco: Retorna informações sobre o endereço correspondente ao CEP fornecido. Passar via body json na sua requisição: { "cep":"insira_cep_aqui" } App disponível para testes na url: https://api-cep-lilac.vercel.app/endereco
+GET /endereco: Retorna informações sobre o endereço correspondente ao CEP fornecido. Passar via body json na sua requisição: { "cep":"insira_cep_aqui" } App disponível para testes na url: https://api-cep-nu.vercel.app/endereco
 
